@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DiscoVertigoTest:jar">
+    <output-path>$PROJECT_DIR$/../ServerProva-1.12.2/plugins</output-path>
+    <root id="archive" name="DiscoVertigo.jar">
+      <element id="module-output" name="DiscoVertigo" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../EffectLib-6.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

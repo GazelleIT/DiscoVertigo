@@ -1,0 +1,22 @@
+name: DiscoVertigo
+version: ${project.version}
+main: com.gazelle.discovertigo.Vertigo
+
+depend: [EffectLib]
+softdepend: []
+loadbefore: []
+
+commands:
+  test:
+    description: Development Testing Command
+    aliases: []
+    usage:
+  disco:
+    description: Main Commands
+    aliases: [d]
+    usage:
+  mainstage:
+    description: MainStage Commands
+    aliases: [d]
+    usage:
+

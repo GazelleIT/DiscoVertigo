@@ -1,0 +1,166 @@
+###########################
+# STAGE ENTITIES SETTINGS #
+###########################
+
+# Write down all your stages and which effect you want to control:
+# Stage names are NOT "case-sensitive"
+# If you write for example a crystal and a beacon under the same stage name, they will be considered
+# part of the same stage
+StageNames:
+  - stage_example_name
+  - second_stage_example_name
+
+Beacons:
+  stage_example_name:
+    # This must be your beacon coords, not the ones of the block
+    - x,y,z,world
+    - x,y,z,world
+  second_stage_example_name:
+    - x,y,z,world
+
+Crystals:
+  stage_example_name:
+    # For declaring a Crystal you must establish a block which will be your "middle" block.
+    # Around that block will spawn the crystal beams at a certain "radius".
+    # You can set this radius further in this config.yml
+    - x,y,z,world
+
+Glowstone:
+  stage_example_name:
+    # This must be the block you want the glowstone (strobe) to appear
+    - x,y,z,world
+
+Fountains:
+  stage_example_name:
+    # This must be the base block where the fountain will "squirt" the water upward
+    # You can choose how many blocks the effect will spread upward later in the config.yml
+    - x,y,z,world
+
+Screens:
+  stage_example_name:
+    # This must be the central block of the location of the screen you want to appear
+    # Note: You need to write the exact lower block from the central block
+    - x,y,z,world
+
+Particles:
+  stage_example_name:
+    # This must be the block you want the particle effect to appear (Remember that every effect has his own radius)
+    - x,y,z,world
+
+ArmorStands:
+  stage_example_name:
+    # This must be the block you want the armorstand to appear right on top of that
+    - x,y,z,world
+
+#######################
+# Beacons ColorThemes #
+#######################
+
+color_themes:
+  stage_example_name:
+    example_theme_name_1:
+      - blue
+      - green
+    example_theme_name_2:
+      - light_purple
+      - light_green
+
+  second_stage_example_name:
+    example_theme_name_1:
+      - light_gray
+      - white
+
+#######################
+# Crystals CustomPath #
+#######################
+
+custom_crystals:
+  stage_example_name:
+    example_path_name_1:
+      1,2:
+        - x,y,z,world
+        - delay 2
+        - blocked
+      3:
+        - blocked
+        - delay 0.3
+        - x,y,z,world
+
+
+
+#######################
+# CUSTOM GUI SETTINGS #
+#######################
+
+# Here you can choose how your beacons and crystals will show up in the GUI
+# try to re-create your stage in the GUI
+GUI:
+  # Choose a name for the GUI, it will be displayed when opened, can be whatever you like
+  gui_name:
+    # How many rows this GUI is going to have? Remember that a chest has 3 rows, and a double 6 rows
+    Rows: 3
+    # Here you have to link the GUI to a stage name, the ones you chose before
+    StageName: "stage_example_name"
+    # From here starts optional fields:
+    # now you have to add entities to you GUI which belong to the same stage you have wrote in "StageName"
+    # remembering that they will be considered in the order you wrote before in the first part of the config.yml
+    # you only have to select the slot you want the entity to shows up
+    Beacons:
+      # Here the first beacon will appear in the first slot of the GUI
+      - 1
+      # while the second beacon in the fifth slot, and so on..
+      - 5
+    Crystals:
+      - 3
+
+
+
+
+#################
+# LAST SETTINGS #
+#################
+
+# Set where the /disco command will teleport players
+disco_spawn: x,y,z,world
+# Choose the radius (in block) around the "middle block" where crystals beams will spawn
+crystals_radius: 3
+# For random strokes effects choose how many iterations you want to be
+# The higher the iterations are the more the lag will increase
+# Setting the iterations it means that when the crystals will have to choose their target
+# The next target will need to be more far away than <iterations> block, remember to do not
+# write a value higher or equal than the radius itself, if you don't want to use this feature, just put "0"
+crystals_iterations: 1
+# How long the crystal's beam should be (in blocks)?
+# Remember that a longer beam will let you see a bigger white beam
+# while a smaller one will let you see a slimmer white/gray beam
+crystals_beam_lenght: 20
+# Choose how many blocks (Y) the fountain should spread upward
+fountain_spread: 5
+# If true ender crystals won't explode when clicked
+protect_endercrystal: true
+# If true colored balls will be activated
+enable_coloredballs: true
+# Select which blocks the screens will use
+# Note: You will need a texture pack for the screens
+# and change that blocks to the screen you want
+screen_blocks:
+  - white_glazed_terracotta
+  - orange_glazed_terracotta
+  - green_glazed_terracotta
+# Set enabled worlds for ender crystals protection
+enabled_worlds:
+  - world
+  - superworld
+
+###################
+# HALLOWEEN STUFF #
+###################
+
+# Enable Halloween stuff
+halloween_enabled: false
+# Choose the name of the basket the item must have
+trick_or_treat_basket_item_name: 'trick or treat basket'
+# ID of the trick item
+trick_item: 'bone'
+# ID of the treat item
+treat_item: 'red_flower'

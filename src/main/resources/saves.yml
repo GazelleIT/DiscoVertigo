@@ -1,0 +1,20 @@
+#######################
+# Beacons ColorThemes
+#######################
+
+color_themes:
+  stage_example_name:
+    theme_1:
+      colors:
+        - blue
+        - orange
+    theme_2:
+      colors:
+        - light_purple
+        - light_green
+
+  second_stage_example_name:
+    theme_1:
+      colors:
+        - light_gray
+        - white
